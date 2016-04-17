@@ -1,9 +1,10 @@
 # catchmusic_from_netease_cache
-Catch the music from local cache in netease whitch you could not download.
-通过从缓存中抓取听过的音乐，解决一些听过但是由于一些原因（如需要会员才可以下载）无法正常下载的音乐；
-Usage：
-python catchmusic_from_netease_cache.py
-界面如下：
+Catch the music from local cache in netease whitch you could not download.<br>
+通过从缓存中抓取听过的音乐，解决一些听过但是由于一些原因（如需要会员才可以下载）无法正常下载的音乐；<br>
+Usage：<br>
+python catchmusic_from_netease_cache.py<br>
+界面如下：<br>
+
 Start:************************************************
 正在扫描本地缓存:
 Found music name:  七里香
