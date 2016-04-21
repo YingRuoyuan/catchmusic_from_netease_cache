@@ -1,6 +1,6 @@
 # catchmusic_from_netease_cache
 Catch the music from local cache in netease whitch you could not download.<br>
-通过从网易云音乐缓存中抓取听过的音乐，解决一些听过但是由于一些原因（如需要会员才可以下载）无法正常下载的音乐；<br>
+通过从网易云音乐缓存中抓取听过的音乐，解决一些听过但是由于一些原因无法正常下载的音乐；<br>
 
 Usage：<br>
 python catchmusic_from_netease_cache.py<br>
