@@ -56,7 +56,7 @@ class Catch_music(object):
 
     def catch_file(self, num):
         username = getpass.getuser()
-        cachePath = self.getCachePath(username)
+        self.cachePath = self.getCachePath(username)
         targetPath = self.getSavePath(username)
         targetname=self.music_list[num].get('music_name')
         fileName=self.music_list[num].get('cache_name')
@@ -69,7 +69,7 @@ class Catch_music(object):
         else:
             print "[Error]:Can not found the cachefile %s." % (fileName)
             sys.exit()
-        shutil.copyfile(os.path.join(cachePath, cachefile), os.path.join(targetPath, cachefile))
+        shutil.copyfile(os.path.join(self.cachePath, cachefile), os.path.join(targetPath, cachefile))
         os.rename(os.path.join(targetPath, cachefile), os.path.join(targetPath, targetname))
         print cachefile + ' -> ' + targetname
 
@@ -110,12 +110,12 @@ class Catch_music(object):
         print "Start:************************************************"
         print "正在扫描本地缓存:"
         username = getpass.getuser()
-        cachePath = self.getCachePath(username)
+        self.cachePath = self.getCachePath(username)
         targetPath = self.getSavePath(username)
         if os.path.exists(targetPath) == False:
             os.mkdir(targetPath)
-        os.chdir(cachePath)
-        for fileName in os.listdir(cachePath):
+        os.chdir(self.cachePath)
+        for fileName in os.listdir(self.cachePath):
             portion = os.path.splitext(fileName)
             if portion[1] == '.info':
                 info_text = open(fileName).read()
